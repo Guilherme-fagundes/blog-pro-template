@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+.mobile-nav{
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+.mobile-nav .mobile-nav-content{
+    float: left;
+    width: 80%;
+    margin: 0 auto;
+    background-color: darkseagreen;
+    height: 100vh;
+    padding: 1em 0;
+    position: relative;
+    z-index: 60;
+}
+.mobile-nav .mobile-nav-content a{
+    display: block;
+    width: 100%;
+    padding: 1em 1em;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: darkseagreen;
+    padding: 1em 0;
+}
+
+.header .header-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .header-content .btn-openMenuMobile{
+    display: none;
+}
+
+.header .header-content p {
+    font-size: 2em;
+    color: white;
+    font-weight: 300;
+}
+
+.header .header-content nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header .header-content nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    margin: 0 1em;
+
+}
+
+.header .header-content nav .search .flield {
+    display: flex;
+}
+
+.header .header-content nav .search .flield input[name=search] {
+    outline: 0;
+    border: 0;
+    padding: 5px 10px;
+    /*border-bottom-left-radius: 5px;*/
+    /*border-top-left-radius: 5px;*/
+}
+
+.header .header-content nav .search .flield button {
+    border: none;
+    outline: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    background-color: lightgreen;
+    color: white;
+    /*border-bottom-right-radius: 5px;*/
+    /*border-top-right-radius: 5px;*/
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-content {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+.blog{
+    min-width: 320px;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    padding: 1em 0;
+
+}
+
+.blog .noticeBox{
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 2em 1em;
+    /*min-width: 320px;*/
+    font-size: .9em;
+    background-color: #f1f1f1;
+    margin: 1em 1em;
+
+}
+.blog .noticeBox .noticeTitle{
+    text-align: center;
+
+}
+.blog .noticeBox .noticeBody{
+    text-align: center;
+    font-size: .9em;
+    margin: 1em 0;
+    padding: 1em 0;
+}
+.blog .noticeBox .noticeFooter{
+    text-align: center;
+}
+.blog .noticeBox .noticeFooter a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: darkseagreen;
+    padding: 8px 1em;
+    font-size: .9em;
+
+}
+
+
+@media all and (max-width: 45em){
+
+    .blog{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+@media all and (max-width: 55.438em){
+    .header-content .header-nav{
+        display: none!important;
+    }
+    .btn-openMenuMobile{
+        display: block!important;
+        cursor: pointer;
+    }
+}
+
